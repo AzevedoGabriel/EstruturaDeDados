@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;oi&apos; in &apos;sorting.simpleSorting.BubbleSort.sort(...)&apos; to &apos;array&apos;&#x0A;- Original project: &apos;R01-01-Rot-SimpleSorting-Simultaneous-Bubble-environment&apos;&#x0A;- Original element: &apos;sorting.simpleSorting.BubbleSort.sort(T[], int, int).oi&apos;&#x0A;- Renamed element: &apos;oi&apos;&#x0A;- Update references to refactored element" description="Rename local variable &apos;oi&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src\/main\/java&lt;sorting.simpleSorting{BubbleSort.java[BubbleSort~sort~\[QT;~I~I@oi!389!394!393!394!\[QT;!0!true" name="array" references="true" stamp="1536256188720" version="1.0"/>
+</session>

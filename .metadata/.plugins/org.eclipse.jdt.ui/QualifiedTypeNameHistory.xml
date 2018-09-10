@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="sorting.simpleSorting.BubbleSort"/>
+<fullyQualifiedTypeName name="sorting.simpleSorting.InsertionSort"/>
+<fullyQualifiedTypeName name="util.Util"/>
+<fullyQualifiedTypeName name="sorting.simpleSorting.SelectionSort"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="sorting.variationsOfBubblesort.SimultaneousBubblesort"/>
+</qualifiedTypeNameHistroy>
