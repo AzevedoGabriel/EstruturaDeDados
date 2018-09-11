@@ -118,6 +118,7 @@
 								<!-- name>sorting.simpleSorting.BubbleSort</name -->
 								<!-- name>sorting.simpleSorting.SelectionSort</name -->
 								<name>sorting.divideAndConquer.MergeSort</name>
+								<name>sorting.divideAndConquer.QuickSort</name>
 							</qualifiedNames>
 						</configuration>
 					</execution>

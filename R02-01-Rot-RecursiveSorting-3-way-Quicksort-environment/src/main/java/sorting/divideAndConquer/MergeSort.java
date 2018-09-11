@@ -1,8 +1,6 @@
 package sorting.divideAndConquer;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 import sorting.AbstractSorting;
 
@@ -13,48 +11,55 @@ import sorting.AbstractSorting;
  * if the list has length == 1, it is already sorted.
  */
 public class MergeSort<T extends Comparable<T>> extends AbstractSorting<T> {
-
    @Override
    public void sort(T[] array, int leftIndex, int rightIndex) {
 
+      // Vai verificar a validade dos parâmetros passados.
       if (array != null && leftIndex < rightIndex && leftIndex >= 0 && rightIndex < array.length && array.length != 0) {
-    	 int meio = (leftIndex + rightIndex) / 2;
-    	 T[] esquerda = Arrays.copyOfRange(array, leftIndex, meio);
-    	 T[] direita = Arrays.copyOfRange(array, meio + 1, rightIndex);
+         if (array.length == 1) {
+            return;
+         }
+         int meio = ((leftIndex + rightIndex) / 2);
          sort(array, leftIndex, meio);
-
          sort(array, meio + 1, rightIndex);
-
-         merge(array, esquerda, direita);
+         merge(array, leftIndex, meio, rightIndex);
 
       }
+  
 
    }
 
-   public List merge(T[] array, T[] esquerda, T[] direita) {
-      List resultado = new ArrayList<T>();
-      System.out.println(resultado);
-      while(esquerda.length > 0 && direita.length > 0) {
-    	  if(esquerda[0].compareTo(direita[0]) <= 0) {
-    		  resultado.add(esquerda[0]);
-    		  esquerda = Arrays.copyOfRange(esquerda, 1, esquerda.length);
-    	  }
-    	  else {
-    		  resultado.add(direita[0]);
-    		  direita = Arrays.copyOfRange(direita, 1, direita.length);
-    	  }
+   public void merge(T[] array, int leftIndex, int meio, int rightIndex) {
+
+      T[] auxiliar = Arrays.copyOf(array, array.length);
+
+      int i = leftIndex;
+      int j = meio + 1;
+      int k = leftIndex;
+
+      while (i <= meio && j <= rightIndex) {
+
+         if (auxiliar[i].compareTo(auxiliar[j]) <= 0) {
+            array[k] = auxiliar[i];
+            i++;
+         } else {
+            array[k] = auxiliar[j];
+            j++;
+         }
+         k++;
+
       }
-      
-      if(esquerda.length > 0) {
-    	  for(int i = 0; i < esquerda.length;i++)
-    	  resultado.add(esquerda[i]);
+
+      while (i <= meio) {
+         array[k] = auxiliar[i];
+         i++;
+         k++;
       }
-      if(direita.length > 0) {
-    	  for(int i = 0; i < direita.length;i++)
-        	  resultado.add(direita[i]);
+      while (j <= rightIndex) {
+         array[k] = auxiliar[j];
+         j++;
+         k++;
       }
-     
-      return resultado;
-      
    }
+
 }
