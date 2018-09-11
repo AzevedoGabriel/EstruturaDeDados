@@ -27,22 +27,33 @@ public class ThreeWayQuickSort<T extends Comparable<T>> extends
 	@Override
 	public void sort(T[] array, int leftIndex, int rightIndex) {
 			
-		int i = leftIndex;
-	    int f = rightIndex;
-	    T pivot = array[leftIndex];
-
-	    while (i <= f) {
-	        if (array[i].compareTo(pivot) < 0) {
-	            Util.swap(array, i++, i++);
-	        }else if (array[i].compareTo(pivot) > 0) {
-	            Util.swap(array, i, f--);
-	        } else {
-	        	
-	            i++;
-	    }
-	    sort(array, leftIndex, i - 1);
-	    sort(array, f + 1, rightIndex);
-	}
-
+		if(leftIndex < rightIndex && array != null && leftIndex >= 0 ) {
+			if(rightIndex <= leftIndex) {
+				return;
+			}
+			int menor = leftIndex, maior = rightIndex;
+			T v = array[leftIndex];
+			int i = leftIndex + 1;
+			while(i <= maior) {
+				if(array[i].compareTo(v) < 0) {
+					Util.swap(array, menor++, i++);
+					
+				}
+				else if(array[i].compareTo(v) > 0) {
+					Util.swap(array,  i,  maior--);
+				}
+				else {
+					i++;
+				}
+			}
+			sort(array,leftIndex,menor -1);
+			sort(array, maior + 1, rightIndex);
+					
+			
+			
+			
+			
+			
+		}
 }
 }

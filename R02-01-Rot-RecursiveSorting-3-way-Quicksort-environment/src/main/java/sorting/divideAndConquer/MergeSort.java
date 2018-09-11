@@ -19,6 +19,8 @@ public class MergeSort<T extends Comparable<T>> extends AbstractSorting<T> {
          if (array.length == 1) {
             return;
          }
+         // vai definir o meio, para ir dividindo a lista, até ficar com tamanho 1 e então comaça a junção até,
+         //a lista ficar ordenada.
          int meio = ((leftIndex + rightIndex) / 2);
          sort(array, leftIndex, meio);
          sort(array, meio + 1, rightIndex);
@@ -28,7 +30,14 @@ public class MergeSort<T extends Comparable<T>> extends AbstractSorting<T> {
   
 
    }
-
+   
+   /**
+    * Metodo que daŕa o merge na lista, ordenando-a.
+    * @param array - array a ser recebido.
+    * @param leftIndex - indice onde começará.
+    * @param meio - meio de onde a lista vai ser dividida.
+    * @param rightIndex - onde termina a ordenação.
+    */
    public void merge(T[] array, int leftIndex, int meio, int rightIndex) {
 
       T[] auxiliar = Arrays.copyOf(array, array.length);
