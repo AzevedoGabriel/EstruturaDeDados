@@ -8,6 +8,7 @@ public class CircularQueue<T> implements Queue<T> {
 	private int elements;
 
 	public CircularQueue(int size) {
+		
 		array = (T[]) new Object[size];
 		head = 0;
 		tail = 0;
@@ -38,6 +39,9 @@ public class CircularQueue<T> implements Queue<T> {
 	}
 	@Override
 	public T head() {
+		if(isEmpty()) {
+			return null;
+		}
 		return array[head];
 	}
 	@Override

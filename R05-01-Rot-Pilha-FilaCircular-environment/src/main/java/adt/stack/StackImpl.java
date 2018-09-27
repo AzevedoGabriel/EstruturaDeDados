@@ -7,6 +7,9 @@ public class StackImpl<T> implements Stack<T> {
 
 	@SuppressWarnings("unchecked")
 	public StackImpl(int size) {
+		if(size <= 0) {
+			throw new RuntimeException();
+		}
 		array = (T[]) new Object[size];
 		top = -1;
 	}

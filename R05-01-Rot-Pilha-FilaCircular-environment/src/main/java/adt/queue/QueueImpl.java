@@ -7,6 +7,9 @@ public class QueueImpl<T> implements Queue<T> {
 
    @SuppressWarnings("unchecked")
    public QueueImpl(int size) {
+	   if(size <= 0) {
+			throw new RuntimeException();
+		}
       array = (T[]) new Object[size];
       tail = -1;
    }
@@ -33,6 +36,9 @@ public class QueueImpl<T> implements Queue<T> {
 
    @Override
    public T head() {
+	   if(isEmpty()) {
+		   return null;
+	   }
       return array[0];
    }
 
