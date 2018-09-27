@@ -2,48 +2,57 @@ package adt.queue;
 
 public class QueueImpl<T> implements Queue<T> {
 
-	private T[] array;
-	private int tail;
+   private T[] array;
+   private int tail;
 
-	@SuppressWarnings("unchecked")
-	public QueueImpl(int size) {
-		array = (T[]) new Object[size];
-		tail = -1;
-	}
+   @SuppressWarnings("unchecked")
+   public QueueImpl(int size) {
+      array = (T[]) new Object[size];
+      tail = -1;
+   }
 
-	@Override
-	public T head() {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Not implemented yet!");
-	}
+   @Override
+   public void enqueue(T elem) throws QueueOverflowException {
+      if (isFull()) {
+         throw new QueueOverflowException();
+      }
+      array[++tail] = elem;
 
-	@Override
-	public boolean isEmpty() {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Not implemented yet!");
-	}
+   }
 
-	@Override
-	public boolean isFull() {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Not implemented yet!");
-	}
+   @Override
+   public T dequeue() throws QueueUnderflowException {
+      if (isEmpty()) {
+         throw new QueueUnderflowException();
+      }
+      T elemen = array[0];
+      array[0] = null;
+      tail--;
+      return elemen;
+   }
 
-	private void shiftLeft() {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Not implemented yet!");
-	}
+   @Override
+   public T head() {
+      return array[0];
+   }
 
-	@Override
-	public void enqueue(T element) throws QueueOverflowException {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Not implemented yet!");
-	}
+   @Override
+   public boolean isEmpty() {
+      return (tail == -1);
+   }
 
-	@Override
-	public T dequeue() throws QueueUnderflowException {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Not implemented yet!");
-	}
+   @Override
+   public boolean isFull() {
+      return (tail == array.length);
+   }
+
+   private void shiftLeft() {
+      int contador = 0;
+      for (int i = 0; i < array.length - 1; i++) {
+         array[i] = array[i + 1];
+         contador += 1;
+      }
+
+   }
 
 }
