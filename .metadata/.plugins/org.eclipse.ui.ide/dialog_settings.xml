@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="/home/rafaeldsa/Documentos/EstruturaDeDados/R06-01-Rot-Linked-list-abordagem-iterativa-environment"/>
 		<item value="/home/rafaeldsa/Roteiros/R01-01-Rot-SimpleSorting-Simultaneous-Bubble-environment"/>
 	</list>
+	<section name="ExternalProjectImportWizard">
+	</section>
 </section>
