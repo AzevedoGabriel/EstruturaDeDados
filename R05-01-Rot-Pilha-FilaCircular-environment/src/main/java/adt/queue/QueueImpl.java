@@ -7,9 +7,7 @@ public class QueueImpl<T> implements Queue<T> {
 
    @SuppressWarnings("unchecked")
    public QueueImpl(int size) {
-	   if(size <= 0) {
-			throw new RuntimeException();
-		}
+	   
       array = (T[]) new Object[size];
       tail = -1;
    }

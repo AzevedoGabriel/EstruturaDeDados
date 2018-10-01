@@ -8,7 +8,9 @@ public class CircularQueue<T> implements Queue<T> {
 	private int elements;
 
 	public CircularQueue(int size) {
-		
+		if(size <= 0) {
+			throw new RuntimeException();
+		}
 		array = (T[]) new Object[size];
 		head = 0;
 		tail = 0;
@@ -17,9 +19,6 @@ public class CircularQueue<T> implements Queue<T> {
 
 	@Override
 	public void enqueue(T elem) throws QueueOverflowException {
-		if(isFull()) {
-			throw new QueueOverflowException();
-		}
 		array[tail] = elem;
 		tail = (tail + 1) % array.length;
 		elements++;

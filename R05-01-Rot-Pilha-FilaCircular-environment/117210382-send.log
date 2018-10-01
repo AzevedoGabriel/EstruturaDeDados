@@ -27,3 +27,23 @@
   <level>FINE</level>
   <message>File 117210382-RAFAEL DANTAS SANTOS DE AZEVEDO.zip was received. It was sent by RAFAEL DANTAS SANTOS DE AZEVEDO from IP 192.168.0.105</message>
 </record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2018-09-27T22:38:12.326-0300</date>
+  <logger>RAFAEL DANTAS SANTOS DE AZEVEDO</logger>
+  <level>FINE</level>
+  <message>File 117210382-RAFAEL DANTAS SANTOS DE AZEVEDO.zip was received. It was sent by RAFAEL DANTAS SANTOS DE AZEVEDO from IP 192.168.0.105</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2018-09-27T22:39:43.781-0300</date>
+  <logger>RAFAEL DANTAS SANTOS DE AZEVEDO</logger>
+  <level>FINE</level>
+  <message>File 117210382-RAFAEL DANTAS SANTOS DE AZEVEDO.zip was received. It was sent by RAFAEL DANTAS SANTOS DE AZEVEDO from IP 192.168.0.105</message>
+</record>
