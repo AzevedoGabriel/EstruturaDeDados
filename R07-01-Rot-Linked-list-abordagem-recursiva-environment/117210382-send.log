@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2018-10-08T16:13:34.983-0300</date>
+  <logger>RAFAEL DANTAS SANTOS DE AZEVEDO</logger>
+  <level>FINE</level>
+  <message>File 117210382-RAFAEL DANTAS SANTOS DE AZEVEDO.zip was received. It was sent by RAFAEL DANTAS SANTOS DE AZEVEDO from IP 150.165.74.116</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2018-10-08T18:53:49.627-0300</date>
+  <logger>RAFAEL DANTAS SANTOS DE AZEVEDO</logger>
+  <level>FINE</level>
+  <message>File 117210382-RAFAEL DANTAS SANTOS DE AZEVEDO.zip was received. It was sent by RAFAEL DANTAS SANTOS DE AZEVEDO from IP 192.168.0.105</message>
+</record>
