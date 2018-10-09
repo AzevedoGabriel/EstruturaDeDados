@@ -11,4 +11,5 @@
 <fullyQualifiedTypeName name="adt.linkedList.DoubleLinkedListImpl"/>
 <fullyQualifiedTypeName name="adt.linkedList.DoubleLinkedListNode"/>
 <fullyQualifiedTypeName name="adt.queue.QueueDoubleLinkedListImpl"/>
+<fullyQualifiedTypeName name="adt.linkedList.RecursiveSingleLinkedListImpl"/>
 </qualifiedTypeNameHistroy>

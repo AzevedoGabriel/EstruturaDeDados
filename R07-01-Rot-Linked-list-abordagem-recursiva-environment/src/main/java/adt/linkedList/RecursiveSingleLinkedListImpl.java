@@ -26,12 +26,17 @@ public class RecursiveSingleLinkedListImpl<T> implements LinkedList<T> {
 
 	@Override
 	public int size() {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Not implemented yet!");
+		if (isEmpty()) {
+			return 0;
+		}
+		else {
+			return 1 + next.size();
+		}
 	}
 
 	@Override
 	public T search(T element) {
+		if(!(element == null)) {
 		if(isEmpty()) {
 			return null;
 		}
@@ -43,7 +48,8 @@ public class RecursiveSingleLinkedListImpl<T> implements LinkedList<T> {
 				return next.search(element);
 			}
 		}
-	}
+	} return null;
+}
 
 	@Override
 	public void insert(T element) {
@@ -58,15 +64,37 @@ public class RecursiveSingleLinkedListImpl<T> implements LinkedList<T> {
 
 	@Override
 	public void remove(T element) {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Not implemented yet!");
+		if (element != null) {
+			if (isEmpty()) {
+				//Não faz nada.
+			} else {
+				if (data == element) {
+					data = next.data;
+					next = next.next;
+				} else {
+					next.remove(element);
+				}
+			}
+		}
 	}
-
-	@Override
 	public T[] toArray() {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Not implemented yet!");
+		T[] array = (T[]) new Object[size()];
+		toArray(array, this, 0);
+		return array;
 	}
+	
+	public T[] toArray(T[] array, RecursiveSingleLinkedListImpl<T> node, int position) {
+		if (node == null) {
+			return array;
+		}
+		if (node.isEmpty()) {
+			return array;
+		}
+		else {
+			array[position++] = node.data;
+			return toArray(array, node.next, position);
+		}
+}
 
 	public T getData() {
 		return data;
