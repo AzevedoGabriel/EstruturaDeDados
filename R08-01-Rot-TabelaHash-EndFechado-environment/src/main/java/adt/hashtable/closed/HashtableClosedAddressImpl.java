@@ -69,11 +69,10 @@ public class HashtableClosedAddressImpl<T> extends
   public void insert(T element) {
     if(element != null) {
        int hash =  ((HashFunctionClosedAddress<T>) getHashFunction()).hash(element);
-       System.out.println(hash);
+       
        if (!getCelula(hash).isEmpty()) {
-         this.COLLISIONS++;
+         ++this.COLLISIONS;
        }
-       getCelula(hash);
        getCelula(hash).addFirst(element);
        elements++;
     }
@@ -81,21 +80,38 @@ public class HashtableClosedAddressImpl<T> extends
 
   @Override
   public void remove(T element) {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Not implemented yet!");
+    if(element != null) {
+    	int hash = ((HashFunctionClosedAddress<T>) getHashFunction()).hash(element);
+    	if(getCelula(hash).contains(element)) {
+    		getCelula(hash).remove();
+    		elements--;
+    	}
+    }
+    
   }
 
   @Override
   public T search(T element) {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Not implemented yet!");
-  }
+	  T saida = null;
+	  if(element != null) {
+		  int hash = ((HashFunctionClosedAddress<T>) getHashFunction()).hash(element);
+		  if(getCelula(hash).contains(element)) {
+			  saida = element;
+		  }
+	  }
+	  return saida;
+}
 
   @Override
   public int indexOf(T element) {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Not implemented yet!");
-    
+       int i = 0;
+       while(i < this.table.length) {
+    	   if(getCelula(i).contains(element)) {
+    		   return i;
+    	   }
+    	   i++;
+       }
+       return -1;
   }
   
   
