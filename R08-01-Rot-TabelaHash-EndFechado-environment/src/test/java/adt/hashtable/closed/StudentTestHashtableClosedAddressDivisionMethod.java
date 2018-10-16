@@ -27,6 +27,7 @@ public class StudentTestHashtableClosedAddressDivisionMethod {
 			table1.insert(initialValue);
 			initialValue = initialValue + increment;
 		}
+		
 
 		table2 = new HashtableClosedAddressImpl<Integer>(PROPOSED_SIZE,
 				HashFunctionClosedAddressMethod.DIVISION);
